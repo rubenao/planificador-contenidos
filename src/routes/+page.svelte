@@ -63,6 +63,31 @@
                 {/each}
         </div>
 
+        
+        <div class="flex flex-row gap-5 mt-5">
+
+          {#each form.func1.json.estructura.planificacion as resultado}
+
+          
+
+          <div class="card bg-base-100 w-96 shadow-xl">
+              <div class="card-body">
+                <h2 class="card-title">{resultado.dia}</h2>
+                {#each resultado.publicaciones as topico}
+
+                  <p>{topico.tema}</p>
+                  <p>{topico.formato}</p>
+
+                {/each}
+                
+              </div>
+          </div>
+
+      {/each}
+
+         
+      </div>
+
 
 
         {/if}
